@@ -28,7 +28,6 @@ namespace laba1form
         }
         private void button1_Click(object sender, EventArgs e)
         {
-
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 try
