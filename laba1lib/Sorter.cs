@@ -14,15 +14,15 @@ namespace laba1lib
             List<String> buffer = new List<string>();
             List<String> filenames = new List<string>();
             int j = 0;
-            using (StreamReader sr = new StreamReader(@path))
+            using (StreamReader sr = new StreamReader(path))
             {
                 while (!sr.EndOfStream)
                 {
                     j++;
-                    using (StreamWriter file = new StreamWriter(@basepath+"file" + j.ToString() + ".txt", true, Encoding.UTF8, 100))
+                    using (StreamWriter file = new StreamWriter(basepath+"file" + j.ToString() + ".txt", true, Encoding.UTF8, 100))
                     {
                         buffer.Clear();
-                        filenames.Add(@basepath + "file" + j.ToString() + ".txt");
+                        filenames.Add(basepath + "file" + j.ToString() + ".txt");
                         for (int i = 0; i < 1000000; i++)
                             if (!sr.EndOfStream)
                             {
@@ -49,7 +49,7 @@ namespace laba1lib
                 i++;
             }
             buffer.Sort((pair1, pair2) => pair1.Value.CompareTo(pair2.Value));
-            using (StreamWriter file1 = new StreamWriter(@path ,true, Encoding.UTF8, 100))
+            using (StreamWriter file1 = new StreamWriter(path ,true, Encoding.UTF8, 100))
             {
                 while (buffer[0].Value.CompareTo("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ") < 0)
                 {

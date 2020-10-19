@@ -20,7 +20,7 @@ namespace laba1lib
         }
         public static void Generate(long lines,string Path)
         {
-            using (StreamWriter file1 = new StreamWriter(@Path, true, Encoding.UTF8, 100))
+            using (StreamWriter file1 = new StreamWriter(Path, true, Encoding.UTF8, 100))
             {
                 for (int i = 0; i < lines; i++)
                 {
